@@ -2,13 +2,17 @@ import { meals } from '../data/meals';
 import { useApp } from '../context/AppContext';
 
 const CATEGORY_COLORS = {
-  Italian: 'bg-red-100 text-red-700',
-  Seafood: 'bg-blue-100 text-blue-700',
-  Mexican: 'bg-amber-100 text-amber-700',
+  Chicken: 'bg-yellow-100 text-yellow-700',
+  Pasta: 'bg-red-100 text-red-700',
+  Burgers: 'bg-indigo-100 text-indigo-700',
+  Meatloaf: 'bg-rose-100 text-rose-700',
   Asian: 'bg-orange-100 text-orange-700',
-  American: 'bg-indigo-100 text-indigo-700',
-  Salad: 'bg-green-100 text-green-700',
-  Mediterranean: 'bg-purple-100 text-purple-700',
+  Mexican: 'bg-amber-100 text-amber-700',
+  'Soup/Chili': 'bg-teal-100 text-teal-700',
+  Steak: 'bg-fuchsia-100 text-fuchsia-700',
+  Comfort: 'bg-violet-100 text-violet-700',
+  Flatbread: 'bg-lime-100 text-lime-700',
+  Seafood: 'bg-blue-100 text-blue-700',
 };
 
 export default function MealSelector() {
