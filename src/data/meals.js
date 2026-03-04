@@ -3,6 +3,7 @@ export const meals = [
     id: 'sheet-pan-dijon-onion-crunch-chicken',
     name: 'Sheet Pan Dijon Onion Crunch Chicken',
     description: 'Chicken cutlets with honey Dijon, melty Monterey Jack, and crispy fried onions with green beans and garlic bread.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/sheet-pan-dijon-onion-crunch-chicken-67cecd586a498293bec85b1e',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -20,6 +21,7 @@ export const meals = [
     id: 'creamy-tuscan-spaghetti-turkey-meatballs',
     name: 'Creamy Tuscan Spaghetti & Turkey Meatballs',
     description: 'Tender meatballs in a rich lemon cream sauce with Tuscan spices, scallions, and spaghetti.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/creamy-tuscan-spaghetti-and-turkey-meatballs-68d656b89ed4d6794189f916',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -40,6 +42,7 @@ export const meals = [
     id: 'white-cheddar-crunch-turkey-burgers',
     name: 'White Cheddar Crunch Burgers',
     description: 'Juicy beef patties with melty white cheddar, griddled and fried onions on brioche buns with potato wedges.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/white-cheddar-crunch-turkey-burgers-68d656e39ed4d6794189faa6',
     baseServings: 2,
     category: 'Burgers',
     ingredients: [
@@ -56,6 +59,7 @@ export const meals = [
     id: 'chicken-mushroom-truffle-penne',
     name: 'Chicken & Mushroom Truffle Penne',
     description: 'Sauteed mushrooms and chicken in a cream cheese truffle sauce with garlicky panko and parmesan.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/chicken-and-mushroom-truffle-penne-6880821d1a6058702bed8e1a',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -76,6 +80,7 @@ export const meals = [
     id: 'one-pan-cheesy-turkey-tortilla-melts',
     name: 'One-Pan Cheesy Turkey Tortilla Melts',
     description: 'Ground turkey and green pepper stuffed tortillas with cheddar and spicy cream sauce.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/one-pan-cheesy-turkey-tortilla-melts-6945997235efa043add927c9',
     baseServings: 2,
     category: 'Mexican',
     ingredients: [
@@ -94,6 +99,7 @@ export const meals = [
     id: 'turkey-meatballs-bulgogi-sauce',
     name: 'Meatballs with Bulgogi Sauce',
     description: 'Korean-style bulgogi-glazed meatballs over jasmine rice with roasted carrots and creamy sriracha.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/turkey-meatballs-with-bulgogi-sauce-684912b1600ad5b2e3ee686e',
     baseServings: 2,
     category: 'Asian',
     ingredients: [
@@ -113,6 +119,7 @@ export const meals = [
     id: 'ricotta-tomato-ravioli',
     name: 'Ricotta Tomato Ravioli',
     description: 'Fresh ravioli with toasted panko, creamy marinara, lemony zucchini, and parsley.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/ricotta-tomato-ravioli-6819e8895efe69a088447ef6',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -132,6 +139,7 @@ export const meals = [
     id: 'sweet-ancho-glazed-beef-meatloaves',
     name: 'Sweet Ancho Glazed Beef Meatloaves',
     description: 'Smoky ancho-spiced meatloaves with melty cheddar and red pepper jam glaze over sweet potatoes.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/sweet-ancho-glazed-beef-meatloaves-6930a6177558b9c7de4dc6b1',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -151,6 +159,7 @@ export const meals = [
     id: 'sweet-soy-honey-turkey',
     name: 'Sweet Soy Honey Turkey',
     description: 'Ground turkey in a sweet, savory, spicy soy-honey glaze with green beans and jasmine rice.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/sweet-soy-honey-turkey-68d653c1681e58ed6e5b294c',
     baseServings: 2,
     category: 'Asian',
     ingredients: [
@@ -169,6 +178,7 @@ export const meals = [
     id: 'figgy-balsamic-chicken',
     name: 'Figgy Balsamic Chicken',
     description: 'Chicken cutlets with fig jam balsamic sauce, roasted carrots, and thyme potatoes.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/figgy-balsamic-chicken-67f4f84dd0f23136022c40e1',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -187,6 +197,7 @@ export const meals = [
     id: 'tangy-ginger-steak-pepper-stir-fry',
     name: 'Tangy Ginger Steak & Pepper Stir-Fry',
     description: 'Tender steak with bell peppers and carrots in a plum jam ponzu sauce over scallion rice.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/tangy-ginger-steak-and-pepper-stir-fry-68f112d006894ecf19162f7c',
     baseServings: 2,
     category: 'Steak',
     ingredients: [
@@ -209,6 +220,7 @@ export const meals = [
     id: 'turkey-sun-dried-tomato-spaghetti',
     name: 'Sun-Dried Tomato Spaghetti',
     description: 'Spaghetti with sun-dried tomatoes, fresh herbs, toasted almonds, and parmesan.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/turkey-sun-dried-tomato-spaghetti-64403cf1c524c544260a55d8',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -227,6 +239,7 @@ export const meals = [
     id: 'firecracker-turkey-meatloaves',
     name: 'Firecracker Turkey Meatloaves',
     description: 'Turkey meatloaves with soy-ginger glaze, roasted zucchini, broccoli, and firecracker sauce.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/firecracker-turkey-meatloaves-68d6552d681e58ed6e5b30b1',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -245,6 +258,7 @@ export const meals = [
     id: 'southwest-turkey-three-bean-chili',
     name: 'Southwest Turkey & Three-Bean Chili',
     description: 'Hearty turkey chili with three-bean blend, cheddar, sour cream, cilantro, and tortilla chips.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/southwest-turkey-and-three-bean-chili-691637ac1d103273ffd508a6',
     baseServings: 2,
     category: 'Soup/Chili',
     ingredients: [
@@ -264,6 +278,7 @@ export const meals = [
     id: 'paprika-chicken-sweet-potato-jumble',
     name: 'Paprika Chicken with Sweet Potato Jumble',
     description: 'Smoky paprika chicken with roasted sweet potato, zucchini, bell pepper, and lemon crema.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/paprika-chicken-with-sweet-potato-jumble-68f64d8ac310625e17190721',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -282,6 +297,7 @@ export const meals = [
     id: 'zucchini-pomodoro-penne-bake',
     name: 'Zucchini Pomodoro Penne Bake',
     description: 'Baked penne with zucchini, marinara, herbed ricotta, and melted mozzarella.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/zucchini-pomodoro-penne-bake-6821f6b3ab64acbac546d749',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -300,6 +316,7 @@ export const meals = [
     id: 'sheet-pan-italian-turkey-meatloaves',
     name: 'Sheet Pan Italian Turkey Meatloaves',
     description: 'Italian-seasoned turkey meatloaves with balsamic-glazed zucchini, carrots, and herbed ricotta.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/sheet-pan-italian-turkey-meatloaves-686e210e8d751c3919190ec0',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -321,6 +338,7 @@ export const meals = [
     id: 'honey-butter-bbq-chicken',
     name: 'Honey-Butter BBQ Chicken',
     description: 'BBQ-seasoned chicken with honey compound butter, mashed sweet potatoes, and lemony green beans.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/honey-butter-bbq-chicken-68d6582e9ed4d679418a026a',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -338,6 +356,7 @@ export const meals = [
     id: 'firecracker-meatballs',
     name: 'Firecracker Meatballs',
     description: 'Spicy-sweet meatballs in firecracker sauce with roasted carrots and sesame rice.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/firecracker-meatballs-68d65643d232ff05cfc48104',
     baseServings: 2,
     category: 'Asian',
     ingredients: [
@@ -359,6 +378,7 @@ export const meals = [
     id: 'homestyle-turkey-biscuit-pot-pie',
     name: 'Homestyle Turkey & Biscuit Pot Pie',
     description: 'Creamy turkey and veggie filling topped with golden buttermilk biscuits.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/homestyle-turkey-biscuit-pot-pie-6758a6c9daedc2bd129591ac',
     baseServings: 2,
     category: 'Comfort',
     ingredients: [
@@ -378,6 +398,7 @@ export const meals = [
     id: 'apricot-ponzu-chicken',
     name: 'Apricot Ponzu Chicken',
     description: 'Chicken cutlets with apricot jam ponzu sauce, ginger rice, and roasted green beans.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/apricot-ponzu-chicken-6889cb8f3947e0d99f1708f5',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -395,6 +416,7 @@ export const meals = [
     id: 'old-school-bbq-pork-sloppy-joes',
     name: 'Old-School BBQ Pork Sloppy Joes',
     description: 'Ground pork in BBQ sauce with chipotle on toasted buns, pickled onions, and potato wedges.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/old-school-bbq-pork-sloppy-joes-68dd2e0f90f853057639c0f2',
     baseServings: 2,
     category: 'Burgers',
     ingredients: [
@@ -415,6 +437,7 @@ export const meals = [
     id: 'smoky-bbq-chicken-quesadillas',
     name: 'Smoky BBQ Chicken Quesadillas',
     description: 'Crispy tortillas with BBQ chicken, mozzarella, shallot, and smoky red pepper crema.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/smoky-bbq-chicken-quesadillas-683d783499ef6e5f71327e61',
     baseServings: 2,
     category: 'Mexican',
     ingredients: [
@@ -433,6 +456,7 @@ export const meals = [
     id: 'cozy-meatloaves-creamy-onion-gravy',
     name: 'Cozy Meatloaves with Creamy Onion Gravy',
     description: 'Tender beef meatloaves with rich onion gravy, mashed potatoes, and roasted asparagus.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/cozy-meatloaves-with-creamy-onion-gravy-68e92e5fa267a9c2fbff7a29',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -452,6 +476,7 @@ export const meals = [
     id: 'onion-crunch-chicken',
     name: 'Onion Crunch Chicken',
     description: 'Crispy chicken with Monterey Jack and fried onion crust, mashed potatoes, and green beans.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/onion-crunch-chicken-67409c5193e599735cab9e0d',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -469,6 +494,7 @@ export const meals = [
     id: 'rigatoni-beef-zucchini-ragu',
     name: 'Rigatoni with Beef & Zucchini Ragu',
     description: 'Grated zucchini in Italian-seasoned tomato cream ragu with rigatoni and parmesan.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/rigatoni-with-beef-and-zucchini-ragu-6740b3513b70b98541a650a3',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -489,6 +515,7 @@ export const meals = [
     id: 'sweet-chili-beef-green-bean-bowls',
     name: 'Sweet Chili Beef & Green Bean Bowls',
     description: 'Ground beef and green beans in sweet chili sauce over jasmine rice with crispy onions.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/sweet-chili-beef-green-bean-bowls-683d801e99ef6e5f71327ebe',
     baseServings: 2,
     category: 'Asian',
     ingredients: [
@@ -507,6 +534,7 @@ export const meals = [
     id: 'thyme-gravy-meatloaf-mashed-potatoes',
     name: 'Thyme Gravy Meatloaf with Mashed Potatoes',
     description: 'Mini meatloaves with savory thyme cream sauce, garlic mashed potatoes, and roasted asparagus.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/side-veg-swap-brussels-sprouts-to-asparagus-thyme-gravy-meatloaf-with-mashed-russet-potatoes-and-roasted-brussels-sprouts-demi-glace-68d6945fd232ff05cfc4aa26',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -526,6 +554,7 @@ export const meals = [
     id: 'creamy-chicken-potato-corn-soup',
     name: 'Creamy Chicken, Potato & Corn Soup',
     description: 'Comforting soup with chicken, potatoes, corn, carrots, and tangy creme fraiche.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/creamy-chicken-potato-and-corn-soup-68d24c964e46d3e38d0bf8fa',
     baseServings: 2,
     category: 'Soup/Chili',
     ingredients: [
@@ -544,6 +573,7 @@ export const meals = [
     id: 'turkey-spaghetti-bolognese',
     name: 'Turkey Spaghetti Bolognese',
     description: 'Turkey bolognese sauce with zucchini and parmesan over spaghetti.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/turkey-spaghetti-bolognese-68b81ef889f6cd0253960713',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -562,6 +592,7 @@ export const meals = [
     id: 'steak-mushroom-cream-sauce',
     name: 'Steak with Mushroom Cream Sauce',
     description: 'Ranch steak with creamy mushroom sauce, roasted potatoes, asparagus, and carrots.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/steak-with-mushroom-cream-sauce-68a580922c7d4b5776f179d4',
     baseServings: 2,
     category: 'Steak',
     ingredients: [
@@ -581,6 +612,7 @@ export const meals = [
     id: 'cheddar-crusted-chicken',
     name: 'Cheddar-Crusted Chicken',
     description: 'Crispy cheddar and panko crusted chicken with mashed sweet potatoes and green beans.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/cheddar-crusted-chicken-6899ebeaca9e1ccee13caf19',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -598,6 +630,7 @@ export const meals = [
     id: 'bbq-chicken-bacon-mozz-flatbreads',
     name: 'BBQ Chicken, Bacon & Mozz Flatbreads',
     description: 'Crispy flatbreads with BBQ chicken, smoky bacon, mozzarella, and buttermilk ranch.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/bbq-chicken-bacon-and-mozz-flatbreads-68872439c2892140d719b0c9',
     baseServings: 2,
     category: 'Flatbread',
     ingredients: [
@@ -615,6 +648,7 @@ export const meals = [
     id: 'one-pan-turkey-black-bean-quesadillas',
     name: 'One-Pan Turkey & Black Bean Quesadillas',
     description: 'Tortillas stuffed with black beans, green pepper, and melty cheese with lemon crema.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/one-pan-turkey-and-black-bean-quesadillas-6877558149312dd1756bb83d',
     baseServings: 2,
     category: 'Mexican',
     ingredients: [
@@ -634,6 +668,7 @@ export const meals = [
     id: 'one-pan-turkey-tortelloni-bake',
     name: 'One-Pan Trattoria Tortelloni Bake',
     description: 'Cheese tortelloni in herby tomato cream sauce with crispy parmesan panko topping.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/one-pan-turkey-tortelloni-bake-685291f3f7f97a12fcfe603c',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -653,6 +688,7 @@ export const meals = [
     id: 'hey-honey-salmon',
     name: 'Hey, Honey! Salmon',
     description: 'Spice-rubbed salmon with honey Dijon sauce, potato wedges, and zesty asparagus.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/hey-honey-salmon-6824370a41004c30bea67fc1',
     baseServings: 2,
     category: 'Seafood',
     ingredients: [
@@ -670,6 +706,7 @@ export const meals = [
     id: 'brown-sugar-bourbon-bbq-meatballs',
     name: 'Brown Sugar Bourbon BBQ Meatballs',
     description: 'Seasoned meatballs in sweet BBQ-mustard glaze with mashed potatoes and roasted asparagus.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/brown-sugar-bourbon-bbq-glazed-meatballs-681b350e2a7aab539725165f',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -690,6 +727,7 @@ export const meals = [
     id: 'bbq-ranch-chicken-flatbreads',
     name: 'BBQ Ranch Chicken Flatbreads',
     description: 'Flatbreads with BBQ chicken, mozzarella, white cheddar, and ranch dressing.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/bbq-ranch-chicken-flatbreads-68109bd3cc2d98a6872f82f2',
     baseServings: 2,
     category: 'Flatbread',
     ingredients: [
@@ -706,6 +744,7 @@ export const meals = [
     id: 'bbq-meatloaves-shingled-potatoes',
     name: 'BBQ Meatloaves with Shingled Potatoes',
     description: 'BBQ-glazed meatloaves with shingled potatoes, roasted broccoli, and scallion crema.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/bbq-meatloaves-with-shingled-potatoes-67fe10090650f0227cb181ec',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -724,6 +763,7 @@ export const meals = [
     id: 'spinach-ricotta-lasagna-roll-ups',
     name: 'Spinach Ricotta Lasagna Roll-Ups',
     description: 'Fresh lasagna noodles rolled with spinach ricotta filling, marinara, and melted mozzarella.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/spinach-ricotta-lasagna-roll-ups-67f4b28e27b8e5819ffebb89',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -745,6 +785,7 @@ export const meals = [
     id: 'roasted-onion-garlic-meatloaves',
     name: 'Roasted Onion & Garlic Meatloaves',
     description: 'Meatloaves with roasted onion-garlic spread and creamy ketchup glaze, mashed potatoes.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/roasted-onion-and-garlic-meatloaves-67f4febc27b8e5819ffebbd2',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
@@ -763,6 +804,7 @@ export const meals = [
     id: 'ancho-bbq-burgers',
     name: 'Ancho BBQ Burgers',
     description: 'Burgers with ancho chili BBQ sauce, griddled onion, and roasted potato wedges.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/ancho-bbq-burgers-67e131faf8f6928425d5c1b5',
     baseServings: 2,
     category: 'Burgers',
     ingredients: [
@@ -779,6 +821,7 @@ export const meals = [
     id: 'brown-sugar-bourbon-chicken',
     name: 'Brown Sugar Bourbon Chicken',
     description: 'Brown sugar bourbon spiced chicken with apple pan sauce, garlic mashed potatoes, and green beans.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/brown-sugar-bourbon-chicken-67bd6d0e29e0dfdacc798137',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -798,6 +841,7 @@ export const meals = [
     id: 'paprika-chicken-lemony-sauce',
     name: 'Paprika Chicken in a Lemony Sauce',
     description: 'Paprika chicken with lemon thyme cream sauce, pistachio rice, and roasted carrots.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/paprika-chicken-in-a-lemony-sauce-677d6618a90519950138ce1c',
     baseServings: 2,
     category: 'Chicken',
     ingredients: [
@@ -817,6 +861,7 @@ export const meals = [
     id: 'chicken-penne-al-limone',
     name: 'Chicken Penne al Limone',
     description: 'Lemon cream pasta with sauteed chicken, zucchini, toasted garlic, and parsley.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/chicken-penne-al-limone-677d68e5a90519950138ce50',
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
@@ -835,6 +880,7 @@ export const meals = [
     id: 'pan-seared-sweet-soy-glazed-chicken',
     name: 'Pan-Seared Sweet Soy Glazed Chicken',
     description: 'Chicken in tangy sweet soy glaze with roasted carrots, broccoli, and scallions.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/pan-seared-sweet-soy-glazed-chicken-666082bbbb68d6ba93ee2f09',
     baseServings: 2,
     category: 'Asian',
     ingredients: [
@@ -852,6 +898,7 @@ export const meals = [
     id: 'meatloaves-sweet-chili-glaze',
     name: 'Meatloaves with a Sweet Chili Glaze',
     description: 'Beef meatloaves with bulgogi sweet chili glaze, sesame broccoli, and ginger rice.',
+    recipeUrl: 'https://www.hellofresh.com/recipes/meatloaves-with-a-sweet-chili-glaze-664ca0b66dac4f56a86a02dc',
     baseServings: 2,
     category: 'Meatloaf',
     ingredients: [
