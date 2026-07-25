@@ -1,7 +1,7 @@
 import { useApp } from '../context/AppContext';
 
 export default function Header() {
-  const { familySize, setFamilySize } = useApp();
+  const { familySize, updateFamilySize } = useApp();
 
   return (
     <header className="bg-emerald-600 text-white shadow-lg">
@@ -14,14 +14,14 @@ export default function Header() {
           <div className="flex items-center gap-3 bg-emerald-700/50 rounded-lg px-4 py-2">
             <span className="text-sm text-emerald-100">Family size:</span>
             <button
-              onClick={() => setFamilySize(Math.max(1, familySize - 1))}
+              onClick={() => updateFamilySize(Math.max(1, familySize - 1))}
               className="w-7 h-7 rounded-full bg-emerald-500 hover:bg-emerald-400 transition-colors flex items-center justify-center text-sm font-bold"
             >
               -
             </button>
             <span className="font-bold text-lg w-6 text-center">{familySize}</span>
             <button
-              onClick={() => setFamilySize(Math.min(12, familySize + 1))}
+              onClick={() => updateFamilySize(Math.min(12, familySize + 1))}
               className="w-7 h-7 rounded-full bg-emerald-500 hover:bg-emerald-400 transition-colors flex items-center justify-center text-sm font-bold"
             >
               +
