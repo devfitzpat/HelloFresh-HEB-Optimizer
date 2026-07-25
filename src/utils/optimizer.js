@@ -57,13 +57,11 @@ export function consolidateIngredients(scaledIngredients) {
     }
   }
 
+  // Keep baseAmount/family so quantity overrides can be applied in base
+  // units and re-displayed after any rescale.
   return Array.from(map.values()).map((item) => {
     const { amount, unit } = bestDisplayUnit(item.baseAmount, item.family, item.fallbackUnit);
-    const { baseAmount, family, fallbackUnit, ...rest } = item;
-    void baseAmount;
-    void family;
-    void fallbackUnit;
-    return { ...rest, amount, unit };
+    return { ...item, amount, unit };
   });
 }
 

@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { meals } from '../data/meals';
 import { generateShoppingList, suggestSwaps } from '../utils/optimizer';
+import { toBaseAmount, bestDisplayUnit } from '../utils/units';
 
 const AppContext = createContext();
 
@@ -80,11 +81,19 @@ export function AppProvider({ children }) {
 
   const { shoppingList, pantryList } = useMemo(() => {
     const { overrides, customItems } = listState;
-    const applyOverride = (item, o) => ({
-      ...item,
-      isChecked: o?.isChecked ?? false,
-      amount: Math.max(0.25, item.amount + (o?.amountDelta ?? 0)),
-    });
+    // amountDelta is stored in the item's base unit (tsp/oz/count), so a
+    // "+¼" made at one display unit still means the same quantity after a
+    // rescale changes the display unit.
+    const applyOverride = (item, o) => {
+      const base = Math.max(0.25, item.baseAmount + (o?.amountDelta ?? 0));
+      const { amount, unit } = bestDisplayUnit(base, item.family, item.fallbackUnit);
+      return {
+        ...item,
+        amount,
+        unit,
+        isChecked: o?.isChecked ?? false,
+      };
+    };
 
     const main = [];
     const pantry = [];
@@ -191,17 +200,19 @@ export function AppProvider({ children }) {
     [patchOverride]
   );
 
+  // delta is in the item's CURRENT display unit; stored in base units.
   const updateShoppingQuantity = useCallback(
-    (itemId, delta) => {
-      if (itemId.startsWith('custom-')) {
+    (item, delta) => {
+      if (item.id.startsWith('custom-')) {
         setListState((prev) => ({
           ...prev,
           customItems: prev.customItems.map((c) =>
-            c.id === itemId ? { ...c, amount: Math.max(0.25, c.amount + delta) } : c
+            c.id === item.id ? { ...c, amount: Math.max(0.25, c.amount + delta) } : c
           ),
         }));
       } else {
-        patchOverride(itemId, (o) => ({ amountDelta: (o.amountDelta ?? 0) + delta }));
+        const baseDelta = toBaseAmount(delta, item.unit);
+        patchOverride(item.id, (o) => ({ amountDelta: (o.amountDelta ?? 0) + baseDelta }));
       }
     },
     [patchOverride]

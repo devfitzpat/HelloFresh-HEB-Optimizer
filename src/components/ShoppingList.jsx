@@ -266,7 +266,7 @@ export default function ShoppingList() {
 
                   <div className="flex items-center gap-1">
                     <button
-                      onClick={() => updateShoppingQuantity(item.id, -0.25)}
+                      onClick={() => updateShoppingQuantity(item, -0.25)}
                       aria-label={`Decrease ${item.name} quantity`}
                       className="w-6 h-6 rounded bg-gray-200 hover:bg-gray-300 transition-colors flex items-center justify-center text-xs font-bold text-gray-600 print:hidden"
                     >
@@ -276,7 +276,7 @@ export default function ShoppingList() {
                       {formatAmount(item.amount)} {item.unit}
                     </span>
                     <button
-                      onClick={() => updateShoppingQuantity(item.id, 0.25)}
+                      onClick={() => updateShoppingQuantity(item, 0.25)}
                       aria-label={`Increase ${item.name} quantity`}
                       className="w-6 h-6 rounded bg-gray-200 hover:bg-gray-300 transition-colors flex items-center justify-center text-xs font-bold text-gray-600 print:hidden"
                     >
