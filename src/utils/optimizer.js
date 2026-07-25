@@ -14,24 +14,11 @@ const UNIT_TO_TBSP = {
   lb: 32,
   piece: 3, // rough estimate: 1 piece ~ 3 tbsp for filtering purposes
   clove: 0.5,
-  bunch: 16,
   can: 16,
-  stalk: 3,
-  head: 48,
-  pinch: 0.1,
 };
 
 export function toTbsp(amount, unit) {
   return amount * (UNIT_TO_TBSP[unit] || 1);
-}
-
-// Scale ingredient amounts based on serving adjustments
-export function scaleIngredient(ingredient, mealServings, baseServings) {
-  const scale = mealServings / baseServings;
-  return {
-    ...ingredient,
-    amount: ingredient.amount * scale,
-  };
 }
 
 // Get all ingredients from selected meals, scaled
@@ -104,7 +91,7 @@ export function generateShoppingList(selectedMeals) {
 }
 
 // Calculate ingredient overlap score between a meal and a set of other selected meals
-function getOverlapScore(candidateMeal, otherSelectedMeals, familySize) {
+function getOverlapScore(candidateMeal, otherSelectedMeals) {
   const candidateIngNames = new Set(
     candidateMeal.ingredients.map((i) => normalizeIngredient(i.name))
   );
@@ -132,10 +119,6 @@ function getOverlapScore(candidateMeal, otherSelectedMeals, familySize) {
 
 // Find shared ingredients between a candidate and other meals
 function getSharedIngredients(candidateMeal, otherSelectedMeals) {
-  const candidateIngNames = new Set(
-    candidateMeal.ingredients.map((i) => normalizeIngredient(i.name))
-  );
-
   const otherIngNames = new Set();
   for (const sel of otherSelectedMeals) {
     const meal = meals.find((m) => m.id === sel.mealId);
@@ -156,7 +139,7 @@ function getSharedIngredients(candidateMeal, otherSelectedMeals) {
 }
 
 // Main optimization: suggest meal swaps
-export function suggestSwaps(selectedMeals, familySize) {
+export function suggestSwaps(selectedMeals) {
   const selectedIds = new Set(selectedMeals.map((s) => s.mealId));
 
   // Build all possible swaps first
@@ -166,12 +149,12 @@ export function suggestSwaps(selectedMeals, familySize) {
     if (!currentMeal) continue;
 
     const otherSelected = selectedMeals.filter((s) => s.mealId !== sel.mealId);
-    const currentOverlap = getOverlapScore(currentMeal, otherSelected, familySize);
+    const currentOverlap = getOverlapScore(currentMeal, otherSelected);
 
     const alternatives = meals
       .filter((m) => !selectedIds.has(m.id))
       .map((candidate) => {
-        const overlap = getOverlapScore(candidate, otherSelected, familySize);
+        const overlap = getOverlapScore(candidate, otherSelected);
         const shared = getSharedIngredients(candidate, otherSelected);
         return {
           meal: candidate,

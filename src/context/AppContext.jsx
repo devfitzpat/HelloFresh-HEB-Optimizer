@@ -10,7 +10,7 @@ function loadFromStorage() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) return JSON.parse(saved);
-  } catch (e) {
+  } catch {
     // ignore parse errors
   }
   return null;
@@ -19,7 +19,7 @@ function loadFromStorage() {
 function saveToStorage(data) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  } catch (e) {
+  } catch {
     // ignore storage errors
   }
 }
@@ -43,6 +43,7 @@ export function AppProvider({ children }) {
   // Regenerate shopping list whenever selected meals change
   useEffect(() => {
     if (selectedMeals.length > 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- list becomes derived state in the persistence overhaul
       setShoppingList(generateShoppingList(selectedMeals));
     } else {
       setShoppingList([]);
@@ -77,9 +78,9 @@ export function AppProvider({ children }) {
   }, []);
 
   const optimize = useCallback(() => {
-    const result = suggestSwaps(selectedMeals, familySize || 3);
+    const result = suggestSwaps(selectedMeals);
     setSuggestions(result);
-  }, [selectedMeals, familySize]);
+  }, [selectedMeals]);
 
   const applySwap = useCallback(
     (currentMealId, newMealId) => {
@@ -219,6 +220,7 @@ export function AppProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useApp() {
   const ctx = useContext(AppContext);
   if (!ctx) throw new Error('useApp must be used within AppProvider');
