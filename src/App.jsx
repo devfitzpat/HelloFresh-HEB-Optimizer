@@ -1,4 +1,5 @@
 import { AppProvider, useApp } from './context/AppContext';
+import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import FamilySetup from './components/FamilySetup';
 import MealSelector from './components/MealSelector';
@@ -27,8 +28,10 @@ function AppContent() {
 
 export default function App() {
   return (
-    <AppProvider>
-      <AppContent />
-    </AppProvider>
+    <ErrorBoundary>
+      <AppProvider>
+        <AppContent />
+      </AppProvider>
+    </ErrorBoundary>
   );
 }

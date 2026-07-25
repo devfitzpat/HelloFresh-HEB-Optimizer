@@ -25,7 +25,7 @@ export const meals = [
     baseServings: 2,
     category: 'Pasta',
     ingredients: [
-      { id: 'r2-1', name: 'Ground Beef', amount: 10, unit: 'oz', category: 'Proteins/Meat' },
+      { id: 'r2-1', name: 'Ground Turkey', amount: 10, unit: 'oz', category: 'Proteins/Meat' },
       { id: 'r2-2', name: 'Spaghetti', amount: 6, unit: 'oz', category: 'Pantry/Dry Goods' },
       { id: 'r2-3', name: 'Cream Sauce Base', amount: 4, unit: 'oz', category: 'Dairy' },
       { id: 'r2-4', name: 'Panko Breadcrumbs', amount: 0.25, unit: 'cup', category: 'Pantry/Dry Goods' },
@@ -40,13 +40,13 @@ export const meals = [
   },
   {
     id: 'white-cheddar-crunch-turkey-burgers',
-    name: 'White Cheddar Crunch Burgers',
-    description: 'Juicy beef patties with melty white cheddar, griddled and fried onions on brioche buns with potato wedges.',
+    name: 'White Cheddar Crunch Turkey Burgers',
+    description: 'Juicy turkey patties with melty white cheddar, griddled and fried onions on brioche buns with potato wedges.',
     recipeUrl: 'https://www.hellofresh.com/recipes/white-cheddar-crunch-turkey-burgers-68d656e39ed4d6794189faa6',
     baseServings: 2,
     category: 'Burgers',
     ingredients: [
-      { id: 'r3-1', name: 'Ground Beef', amount: 10, unit: 'oz', category: 'Proteins/Meat' },
+      { id: 'r3-1', name: 'Ground Turkey', amount: 10, unit: 'oz', category: 'Proteins/Meat' },
       { id: 'r3-2', name: 'Potatoes', amount: 12, unit: 'oz', category: 'Produce' },
       { id: 'r3-3', name: 'Yellow Onion', amount: 1, unit: 'piece', category: 'Produce' },
       { id: 'r3-4', name: 'Brioche Buns', amount: 2, unit: 'piece', category: 'Pantry/Dry Goods' },
@@ -97,13 +97,13 @@ export const meals = [
   },
   {
     id: 'turkey-meatballs-bulgogi-sauce',
-    name: 'Meatballs with Bulgogi Sauce',
-    description: 'Korean-style bulgogi-glazed meatballs over jasmine rice with roasted carrots and creamy sriracha.',
+    name: 'Turkey Meatballs with Bulgogi Sauce',
+    description: 'Korean-style bulgogi-glazed turkey meatballs over jasmine rice with roasted carrots and creamy sriracha.',
     recipeUrl: 'https://www.hellofresh.com/recipes/turkey-meatballs-with-bulgogi-sauce-684912b1600ad5b2e3ee686e',
     baseServings: 2,
     category: 'Asian',
     ingredients: [
-      { id: 'r6-1', name: 'Ground Beef', amount: 10, unit: 'oz', category: 'Proteins/Meat' },
+      { id: 'r6-1', name: 'Ground Turkey', amount: 10, unit: 'oz', category: 'Proteins/Meat' },
       { id: 'r6-2', name: 'Jasmine Rice', amount: 0.75, unit: 'cup', category: 'Pantry/Dry Goods' },
       { id: 'r6-3', name: 'Carrots', amount: 12, unit: 'oz', category: 'Produce' },
       { id: 'r6-4', name: 'Scallions', amount: 2, unit: 'piece', category: 'Produce' },

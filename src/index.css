@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+/* Visible focus for keyboard users on every interactive element. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-emerald-500);
+    outline-offset: 2px;
+  }
+}
+
+/* Printing outputs only the shopping list, black-on-white. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #shopping-list,
+  #shopping-list * {
+    visibility: visible;
+  }
+  #shopping-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}

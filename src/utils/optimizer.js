@@ -1,37 +1,10 @@
 import { meals } from '../data/meals';
+import { departmentFor, departmentIndex, PANTRY_STAPLE_NAMES } from '../data/hebDepartments';
+import { toTbsp, unitFamilyOf, toBaseAmount, bestDisplayUnit } from './units';
 
 // Normalize ingredient names for comparison
 function normalizeIngredient(name) {
   return name.toLowerCase().trim();
-}
-
-// Convert all amounts to tablespoons for comparison
-const UNIT_TO_TBSP = {
-  tsp: 1 / 3,
-  tbsp: 1,
-  cup: 16,
-  oz: 2,
-  lb: 32,
-  piece: 3, // rough estimate: 1 piece ~ 3 tbsp for filtering purposes
-  clove: 0.5,
-  bunch: 16,
-  can: 16,
-  stalk: 3,
-  head: 48,
-  pinch: 0.1,
-};
-
-export function toTbsp(amount, unit) {
-  return amount * (UNIT_TO_TBSP[unit] || 1);
-}
-
-// Scale ingredient amounts based on serving adjustments
-export function scaleIngredient(ingredient, mealServings, baseServings) {
-  const scale = mealServings / baseServings;
-  return {
-    ...ingredient,
-    amount: ingredient.amount * scale,
-  };
 }
 
 // Get all ingredients from selected meals, scaled
@@ -53,16 +26,19 @@ export function getScaledIngredients(selectedMeals) {
   return result;
 }
 
-// Consolidate ingredients by name, summing amounts
+// Consolidate ingredients by name, summing amounts only within a unit family.
+// The same product in incompatible units (e.g. "10 oz" vs "1 cup") stays as
+// separate lines rather than being summed nonsensically.
 export function consolidateIngredients(scaledIngredients) {
   const map = new Map();
 
   for (const ing of scaledIngredients) {
-    const key = normalizeIngredient(ing.name);
+    const family = unitFamilyOf(ing.unit);
+    const key = `${normalizeIngredient(ing.name)}::${family}`;
+    const baseAmount = toBaseAmount(ing.amount, ing.unit);
     if (map.has(key)) {
       const existing = map.get(key);
-      // Sum amounts (convert to same unit if needed, but for simplicity keep the first unit)
-      existing.amount += ing.amount;
+      existing.baseAmount += baseAmount;
       if (!existing.mealSources.includes(ing.mealName)) {
         existing.mealSources.push(ing.mealName);
       }
@@ -70,8 +46,9 @@ export function consolidateIngredients(scaledIngredients) {
       map.set(key, {
         id: `shop-${key}`,
         name: ing.name,
-        amount: ing.amount,
-        unit: ing.unit,
+        baseAmount,
+        family,
+        fallbackUnit: ing.unit,
         category: ing.category,
         mealSources: [ing.mealName],
         isChecked: false,
@@ -80,138 +57,134 @@ export function consolidateIngredients(scaledIngredients) {
     }
   }
 
-  return Array.from(map.values());
+  // Keep baseAmount/family so quantity overrides can be applied in base
+  // units and re-displayed after any rescale.
+  return Array.from(map.values()).map((item) => {
+    const { amount, unit } = bestDisplayUnit(item.baseAmount, item.family, item.fallbackUnit);
+    return { ...item, amount, unit };
+  });
 }
 
-// Filter out items less than 2 tablespoons total
-export function filterSmallAmounts(items) {
-  return items.filter((item) => toTbsp(item.amount, item.unit) >= 2);
+// Split out small amounts and common staples into a "check your pantry"
+// list instead of dropping them. Every consolidated item ends up in exactly
+// one of the two lists.
+export function splitPantryStaples(items) {
+  const mainItems = [];
+  const pantryItems = [];
+  for (const item of items) {
+    const isStaple = PANTRY_STAPLE_NAMES.has(normalizeIngredient(item.name));
+    const isSmall = toTbsp(item.amount, item.unit) < 2;
+    (isStaple || isSmall ? pantryItems : mainItems).push(item);
+  }
+  return { mainItems, pantryItems };
+}
+
+function byDepartmentThenName(a, b) {
+  const deptDiff = departmentIndex(departmentFor(a)) - departmentIndex(departmentFor(b));
+  if (deptDiff !== 0) return deptDiff;
+  return a.name.localeCompare(b.name);
 }
 
 // Generate shopping list from selected meals
 export function generateShoppingList(selectedMeals) {
   const scaled = getScaledIngredients(selectedMeals);
   const consolidated = consolidateIngredients(scaled);
-  const filtered = filterSmallAmounts(consolidated);
+  const { mainItems, pantryItems } = splitPantryStaples(consolidated);
 
-  // Sort by category, then by name
-  filtered.sort((a, b) => {
-    if (a.category !== b.category) return a.category.localeCompare(b.category);
-    return a.name.localeCompare(b.name);
-  });
+  mainItems.sort(byDepartmentThenName);
+  pantryItems.sort(byDepartmentThenName);
 
-  return filtered;
+  return { items: mainItems, pantryItems };
 }
 
-// Calculate ingredient overlap score between a meal and a set of other selected meals
-function getOverlapScore(candidateMeal, otherSelectedMeals, familySize) {
-  const candidateIngNames = new Set(
-    candidateMeal.ingredients.map((i) => normalizeIngredient(i.name))
-  );
-
-  // Get all ingredient names from other selected meals
-  const otherIngNames = new Set();
-  for (const sel of otherSelectedMeals) {
-    const meal = meals.find((m) => m.id === sel.mealId);
-    if (!meal) continue;
-    for (const ing of meal.ingredients) {
-      otherIngNames.add(normalizeIngredient(ing.name));
-    }
-  }
-
-  // Count overlaps
-  let overlap = 0;
-  for (const name of candidateIngNames) {
-    if (otherIngNames.has(name)) overlap++;
-  }
-
-  return candidateIngNames.size > 0
-    ? (overlap / candidateIngNames.size) * 100
-    : 0;
+function ingredientNamesOf(mealId) {
+  const meal = meals.find((m) => m.id === mealId);
+  if (!meal) return [];
+  return meal.ingredients.map((i) => normalizeIngredient(i.name));
 }
 
-// Find shared ingredients between a candidate and other meals
-function getSharedIngredients(candidateMeal, otherSelectedMeals) {
-  const candidateIngNames = new Set(
-    candidateMeal.ingredients.map((i) => normalizeIngredient(i.name))
-  );
-
-  const otherIngNames = new Set();
-  for (const sel of otherSelectedMeals) {
-    const meal = meals.find((m) => m.id === sel.mealId);
-    if (!meal) continue;
-    for (const ing of meal.ingredients) {
-      otherIngNames.add(normalizeIngredient(ing.name));
+// Plan-level overlap: the percentage of ingredient rows across the whole plan
+// that are shared with at least one other meal in the plan.
+export function planOverlapScore(mealIds) {
+  const rowsPerMeal = mealIds.map(ingredientNamesOf);
+  const mealCountByName = new Map();
+  for (const rows of rowsPerMeal) {
+    for (const name of new Set(rows)) {
+      mealCountByName.set(name, (mealCountByName.get(name) || 0) + 1);
     }
   }
 
-  const shared = [];
-  for (const ing of candidateMeal.ingredients) {
-    if (otherIngNames.has(normalizeIngredient(ing.name))) {
-      shared.push(ing.name);
+  let total = 0;
+  let shared = 0;
+  for (const rows of rowsPerMeal) {
+    for (const name of rows) {
+      total++;
+      if (mealCountByName.get(name) >= 2) shared++;
     }
   }
-
-  return shared;
+  return total > 0 ? (shared / total) * 100 : 0;
 }
 
-// Main optimization: suggest meal swaps
-export function suggestSwaps(selectedMeals, familySize) {
-  const selectedIds = new Set(selectedMeals.map((s) => s.mealId));
+// Ingredients a candidate meal shares with the rest of the plan.
+function sharedWithPlan(candidateId, otherMealIds) {
+  const otherNames = new Set(otherMealIds.flatMap(ingredientNamesOf));
+  const meal = meals.find((m) => m.id === candidateId);
+  if (!meal) return [];
+  return meal.ingredients.filter((i) => otherNames.has(normalizeIngredient(i.name))).map((i) => i.name);
+}
 
-  // Build all possible swaps first
-  const allSwaps = [];
-  for (const sel of selectedMeals) {
-    const currentMeal = meals.find((m) => m.id === sel.mealId);
-    if (!currentMeal) continue;
+// Suggest meal swaps, greedily: each round finds the single swap that most
+// improves the plan-level overlap of the plan WITH ALL PRIOR SUGGESTIONS
+// APPLIED, so the advertised improvements are additive and "Accept All"
+// delivers exactly totalImprovement.
+export function suggestSwaps(selectedMeals) {
+  const originalIds = selectedMeals.map((s) => s.mealId);
+  const baseScore = planOverlapScore(originalIds);
 
-    const otherSelected = selectedMeals.filter((s) => s.mealId !== sel.mealId);
-    const currentOverlap = getOverlapScore(currentMeal, otherSelected, familySize);
-
-    const alternatives = meals
-      .filter((m) => !selectedIds.has(m.id))
-      .map((candidate) => {
-        const overlap = getOverlapScore(candidate, otherSelected, familySize);
-        const shared = getSharedIngredients(candidate, otherSelected);
-        return {
-          meal: candidate,
-          overlapScore: Math.round(overlap),
-          sharedIngredients: shared,
-          improvement: Math.round(overlap - currentOverlap),
-        };
-      })
-      .filter((alt) => alt.improvement > 0)
-      .sort((a, b) => b.overlapScore - a.overlapScore)
-      .slice(0, 5);
-
-    for (const alt of alternatives) {
-      allSwaps.push({ currentMeal, alternative: alt });
-    }
-  }
-
-  // Sort by improvement descending
-  allSwaps.sort((a, b) => b.alternative.improvement - a.alternative.improvement);
-
-  // Greedily pick top swaps, ensuring no duplicate current or replacement meals
-  const usedCurrentIds = new Set();
-  const usedReplacementIds = new Set();
+  const workingIds = [...originalIds];
+  let workingScore = baseScore;
+  const swappedSlots = new Set();
   const suggestions = [];
 
-  for (const swap of allSwaps) {
-    if (usedCurrentIds.has(swap.currentMeal.id)) continue;
-    if (usedReplacementIds.has(swap.alternative.meal.id)) continue;
+  while (suggestions.length < originalIds.length) {
+    let best = null;
+    for (let slot = 0; slot < workingIds.length; slot++) {
+      if (swappedSlots.has(slot)) continue;
+      for (const candidate of meals) {
+        if (workingIds.includes(candidate.id) || originalIds.includes(candidate.id)) continue;
+        const trialIds = [...workingIds];
+        trialIds[slot] = candidate.id;
+        const score = planOverlapScore(trialIds);
+        if (score > workingScore + 1e-9 && (!best || score > best.score)) {
+          best = { slot, candidate, score };
+        }
+      }
+    }
+    if (!best) break;
 
-    usedCurrentIds.add(swap.currentMeal.id);
-    usedReplacementIds.add(swap.alternative.meal.id);
+    const otherIds = workingIds.filter((_, i) => i !== best.slot);
+    const currentMeal = meals.find((m) => m.id === originalIds[best.slot]);
     suggestions.push({
-      currentMeal: swap.currentMeal,
-      bestAlternative: swap.alternative,
+      currentMeal,
+      bestAlternative: {
+        meal: best.candidate,
+        overlapScore: Math.round(best.score),
+        sharedIngredients: sharedWithPlan(best.candidate.id, otherIds),
+        improvement: Math.round(best.score - workingScore),
+      },
     });
 
-    if (suggestions.length >= 5) break;
+    workingIds[best.slot] = best.candidate.id;
+    workingScore = best.score;
+    swappedSlots.add(best.slot);
   }
 
-  return suggestions;
+  return {
+    suggestions,
+    baseScore: Math.round(baseScore),
+    finalScore: Math.round(workingScore),
+    totalImprovement: Math.round(workingScore - baseScore),
+  };
 }
 
 // Format amount for display
@@ -222,11 +195,11 @@ export function formatAmount(amount) {
   const frac = amount - Math.floor(amount);
   const whole = Math.floor(amount);
   const fractions = [
-    [0.25, '\u00BC'],
-    [0.33, '\u2153'],
-    [0.5, '\u00BD'],
-    [0.67, '\u2154'],
-    [0.75, '\u00BE'],
+    [0.25, '¼'],
+    [0.33, '⅓'],
+    [0.5, '½'],
+    [0.67, '⅔'],
+    [0.75, '¾'],
   ];
   for (const [val, sym] of fractions) {
     if (Math.abs(frac - val) < 0.06) {
