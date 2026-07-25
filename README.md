@@ -55,4 +55,6 @@ Recipe images, cook times, and tags in `src/data/mealMeta.json` are generated �
 node scripts/enrich-meals.mjs
 ```
 
+No machine handy? The **Refresh recipe metadata** workflow (Actions tab → Run workflow) runs the same script on a GitHub-hosted runner and commits the results. Afterwards, dispatch **Deploy to GitHub Pages** to publish — bot commits don't retrigger it automatically.
+
 The script fetches each recipe's HelloFresh page, extracts the image and metadata, downloads images to `public/meal-images/`, and prints a reconciliation report flagging any recipe whose name/protein disagrees with the linked page. HelloFresh rotates recipes, so 404s are expected over time; affected meals keep working with a fallback card design. Commit the regenerated `mealMeta.json` and images.
