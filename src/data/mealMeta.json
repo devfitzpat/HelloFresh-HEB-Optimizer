@@ -1,378 +1,460 @@
 {
   "sheet-pan-dijon-onion-crunch-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/sheet-pan-dijon-onion-crunch-chicken.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Sheet Pan Dijon Onion Crunch Chicken with Green Beans & Garlic Bread",
+    "fetchedAt": "2026-07-25T01:42:29.030Z"
   },
   "creamy-tuscan-spaghetti-turkey-meatballs": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/creamy-tuscan-spaghetti-turkey-meatballs.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "Southern European"
+    ],
+    "status": "ok",
+    "canonicalName": "Creamy Tuscan Spaghetti & Meatballs with Scallions & Lemon",
+    "fetchedAt": "2026-07-25T01:42:31.063Z"
   },
   "white-cheddar-crunch-turkey-burgers": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/white-cheddar-crunch-turkey-burgers.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "White Cheddar Crunch Burgers with Griddled Onions, Roasted Potato Wedges & Smoky Mustard",
+    "fetchedAt": "2026-07-25T01:42:33.444Z"
   },
   "chicken-mushroom-truffle-penne": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/chicken-mushroom-truffle-penne.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "Chicken & Mushroom Truffle Penne with Garlicky Panko & Parmesan",
+    "fetchedAt": "2026-07-25T01:42:36.894Z"
   },
   "one-pan-cheesy-turkey-tortilla-melts": {
-    "image": null,
-    "totalTimeMinutes": null,
+    "image": "meal-images/one-pan-cheesy-turkey-tortilla-melts.jpg",
+    "totalTimeMinutes": 20,
     "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "status": "ok",
+    "canonicalName": "One-Pan Cheesy Turkey Tortilla Melts with Green Pepper & Spicy Cream Sauce",
+    "fetchedAt": "2026-07-25T01:42:40.387Z"
   },
   "turkey-meatballs-bulgogi-sauce": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/turkey-meatballs-bulgogi-sauce.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Meatballs with Bulgogi Sauce plus Roasted Carrots, Ginger Rice & Creamy Sriracha",
+    "fetchedAt": "2026-07-25T01:42:43.836Z"
   },
   "ricotta-tomato-ravioli": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/ricotta-tomato-ravioli.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "Ricotta Tomato Ravioli with Toasted Panko, Lemony Zucchini & Parsley",
+    "fetchedAt": "2026-07-25T01:42:46.432Z"
   },
   "sweet-ancho-glazed-beef-meatloaves": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/sweet-ancho-glazed-beef-meatloaves.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "North American"
+    ],
+    "status": "ok",
+    "canonicalName": "Sweet Ancho Glazed Beef Meatloaves Now get 50% more protein per serving in this HelloFresh classic!",
+    "fetchedAt": "2026-07-25T01:42:49.743Z"
   },
   "sweet-soy-honey-turkey": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/sweet-soy-honey-turkey.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Sweet Soy Honey Turkey with Green Beans & Jasmine Rice",
+    "fetchedAt": "2026-07-25T01:42:53.360Z"
   },
   "figgy-balsamic-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/figgy-balsamic-chicken.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Figgy Balsamic Chicken with Roasted Carrots & Thyme Potatoes",
+    "fetchedAt": "2026-07-25T01:42:57.006Z"
   },
   "tangy-ginger-steak-pepper-stir-fry": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/tangy-ginger-steak-pepper-stir-fry.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "East Asia"
+    ],
+    "status": "ok",
+    "canonicalName": "Tangy Ginger Steak & Pepper Stir-Fry with Carrot & Scallion Rice",
+    "fetchedAt": "2026-07-25T01:42:59.869Z"
   },
   "turkey-sun-dried-tomato-spaghetti": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/turkey-sun-dried-tomato-spaghetti.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "Sun-Dried Tomato Spaghetti with Fresh Herbs, Almonds & Parmesan",
+    "fetchedAt": "2026-07-25T01:43:04.074Z"
   },
   "firecracker-turkey-meatloaves": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/firecracker-turkey-meatloaves.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "East Asia"
+    ],
+    "status": "ok",
+    "canonicalName": "Firecracker Turkey Meatloaves with Soy-Ginger Glaze & Roasted Zucchini & Broccoli",
+    "fetchedAt": "2026-07-25T01:43:06.462Z"
   },
   "southwest-turkey-three-bean-chili": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/southwest-turkey-three-bean-chili.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North American"
+    ],
+    "status": "ok",
+    "canonicalName": "Southwest Turkey & Three-Bean Chili with Cheddar, Sour Cream, Cilantro & Blue Corn Tortilla Chips",
+    "fetchedAt": "2026-07-25T01:43:09.945Z"
   },
   "paprika-chicken-sweet-potato-jumble": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/paprika-chicken-sweet-potato-jumble.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "Southern European"
+    ],
+    "status": "ok",
+    "canonicalName": "Paprika Chicken with Sweet Potato Jumble Balances protein and fiber while limiting fat, sodium, and added sugar",
+    "fetchedAt": "2026-07-25T01:43:13.342Z"
   },
   "zucchini-pomodoro-penne-bake": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/zucchini-pomodoro-penne-bake.jpg",
+    "totalTimeMinutes": 45,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "Zucchini Pomodoro Penne Bake with Mozzarella & Herbed Ricotta",
+    "fetchedAt": "2026-07-25T01:43:16.642Z"
   },
   "sheet-pan-italian-turkey-meatloaves": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/sheet-pan-italian-turkey-meatloaves.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "Mediterranean"
+    ],
+    "status": "ok",
+    "canonicalName": "Sheet Pan Italian Turkey Meatloaves with Balsamic-Glazed Zucchini Medley, Herbed Ricotta & Garlic",
+    "fetchedAt": "2026-07-25T01:43:18.429Z"
   },
   "honey-butter-bbq-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/honey-butter-bbq-chicken.jpg",
+    "totalTimeMinutes": 25,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Honey-Butter BBQ Chicken with Mashed Sweet Potatoes & Lemony Green Beans",
+    "fetchedAt": "2026-07-25T01:43:22.369Z"
   },
   "firecracker-meatballs": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/firecracker-meatballs.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "East Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Firecracker Meatballs with Roasted Carrots & Sesame Rice",
+    "fetchedAt": "2026-07-25T01:43:26.110Z"
   },
   "homestyle-turkey-biscuit-pot-pie": {
-    "image": null,
-    "totalTimeMinutes": null,
+    "image": "meal-images/homestyle-turkey-biscuit-pot-pie.jpg",
+    "totalTimeMinutes": 50,
     "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "status": "ok",
+    "canonicalName": "Homestyle Turkey & Biscuit Pot Pie with Buttermilk Biscuits",
+    "fetchedAt": "2026-07-25T01:43:29.442Z"
   },
   "apricot-ponzu-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/apricot-ponzu-chicken.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "East Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Apricot Ponzu Chicken with Ginger Rice & Roasted Green Beans",
+    "fetchedAt": "2026-07-25T01:43:32.722Z"
   },
   "old-school-bbq-pork-sloppy-joes": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/old-school-bbq-pork-sloppy-joes.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "North American"
+    ],
+    "status": "ok",
+    "canonicalName": "Old-School BBQ Pork Sloppy Joes Now get 50% more protein per serving in this HelloFresh classic!",
+    "fetchedAt": "2026-07-25T01:43:39.498Z"
   },
   "smoky-bbq-chicken-quesadillas": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/smoky-bbq-chicken-quesadillas.jpg",
+    "totalTimeMinutes": 15,
+    "tags": [
+      "North American"
+    ],
+    "status": "ok",
+    "canonicalName": "Smoky BBQ Chicken Quesadillas with Red Pepper Crema & Cilantro",
+    "fetchedAt": "2026-07-25T01:43:42.802Z"
   },
   "cozy-meatloaves-creamy-onion-gravy": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/cozy-meatloaves-creamy-onion-gravy.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "North American"
+    ],
+    "status": "ok",
+    "canonicalName": "Cozy Meatloaves with Creamy Onion Gravy plus Roasted Parsnips, Asparagus & Potatoes",
+    "fetchedAt": "2026-07-25T01:43:45.920Z"
   },
   "onion-crunch-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/onion-crunch-chicken.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Onion Crunch Chicken with Mashed Sweet Potatoes, Roasted Green Beans & Honey Dijon Dressing",
+    "fetchedAt": "2026-07-25T01:43:50.829Z"
   },
   "rigatoni-beef-zucchini-ragu": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/rigatoni-beef-zucchini-ragu.jpg",
+    "totalTimeMinutes": 25,
+    "tags": [
+      "Southern European"
+    ],
+    "status": "ok",
+    "canonicalName": "Rigatoni with Beef & Zucchini Ragù plus Parmesan Cheese",
+    "fetchedAt": "2026-07-25T01:43:52.653Z"
   },
   "sweet-chili-beef-green-bean-bowls": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/sweet-chili-beef-green-bean-bowls.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Sweet Chili Beef & Green Bean Bowls with Crispy Onions & Cilantro",
+    "fetchedAt": "2026-07-25T01:43:56.130Z"
   },
   "thyme-gravy-meatloaf-mashed-potatoes": {
-    "image": null,
-    "totalTimeMinutes": null,
+    "image": "meal-images/thyme-gravy-meatloaf-mashed-potatoes.jpg",
+    "totalTimeMinutes": 35,
     "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "status": "ok",
+    "canonicalName": "Meatloaves with Creamy Thyme Sauce plus Garlic Mashed Potatoes & Roasted Asparagus",
+    "fetchedAt": "2026-07-25T01:43:57.792Z"
   },
   "creamy-chicken-potato-corn-soup": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/creamy-chicken-potato-corn-soup.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Creamy Chicken, Potato & Corn Soup with Carrots & Fresh Dill",
+    "fetchedAt": "2026-07-25T01:44:00.731Z"
   },
   "turkey-spaghetti-bolognese": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/turkey-spaghetti-bolognese.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "Turkey Spaghetti Bolognese with Zucchini & Parmesan",
+    "fetchedAt": "2026-07-25T01:44:05.012Z"
   },
   "steak-mushroom-cream-sauce": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/steak-mushroom-cream-sauce.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Steak with Mushroom Cream Sauce plus Roasted Potatoes & Asparagus",
+    "fetchedAt": "2026-07-25T01:44:08.214Z"
   },
   "cheddar-crusted-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/cheddar-crusted-chicken.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Cheddar-Crusted Chicken  with Buttery Mashed Sweet Potatoes & Roasted Green Beans",
+    "fetchedAt": "2026-07-25T01:44:11.819Z"
   },
   "bbq-chicken-bacon-mozz-flatbreads": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/bbq-chicken-bacon-mozz-flatbreads.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "BBQ Chicken, Bacon & Onion Flatbreads with Ranch Drizzle",
+    "fetchedAt": "2026-07-25T01:44:15.055Z"
   },
   "one-pan-turkey-black-bean-quesadillas": {
-    "image": null,
-    "totalTimeMinutes": null,
+    "image": "meal-images/one-pan-turkey-black-bean-quesadillas.jpg",
+    "totalTimeMinutes": 15,
     "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "status": "ok",
+    "canonicalName": "One-Pan Organic Beef & Bean Quesadillas with Green Pepper & Lemon Crema",
+    "fetchedAt": "2026-07-25T01:44:18.847Z"
   },
   "one-pan-turkey-tortelloni-bake": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/one-pan-turkey-tortelloni-bake.jpg",
+    "totalTimeMinutes": 25,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "One-Pan Trattoria Tortelloni Bake with a Crispy Parmesan Panko Topping",
+    "fetchedAt": "2026-07-25T01:44:22.340Z"
   },
   "hey-honey-salmon": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/hey-honey-salmon.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Hey, Honey! Salmon with Potato Wedges & Zesty Asparagus",
+    "fetchedAt": "2026-07-25T01:44:25.218Z"
   },
   "brown-sugar-bourbon-bbq-meatballs": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/brown-sugar-bourbon-bbq-meatballs.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "North American"
+    ],
+    "status": "ok",
+    "canonicalName": "Brown Sugar Bourbon BBQ-Glazed Meatballs with Mashed Potatoes & Roasted Asparagus",
+    "fetchedAt": "2026-07-25T01:44:28.107Z"
   },
   "bbq-ranch-chicken-flatbreads": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/bbq-ranch-chicken-flatbreads.jpg",
+    "totalTimeMinutes": 25,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "BBQ Ranch Chicken Flatbreads with Double Cheese",
+    "fetchedAt": "2026-07-25T01:44:31.776Z"
   },
   "bbq-meatloaves-shingled-potatoes": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/bbq-meatloaves-shingled-potatoes.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "BBQ Meatloaves with Shingled Potatoes plus Roasted Broccoli & Scallion Crema",
+    "fetchedAt": "2026-07-25T01:44:35.307Z"
   },
   "spinach-ricotta-lasagna-roll-ups": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/spinach-ricotta-lasagna-roll-ups.jpg",
+    "totalTimeMinutes": 60,
+    "tags": [
+      "Southern Europe"
+    ],
+    "status": "ok",
+    "canonicalName": "Spinach Ricotta Lasagna Roll-Ups 2x the delicious portions!",
+    "fetchedAt": "2026-07-25T01:44:38.874Z"
   },
   "roasted-onion-garlic-meatloaves": {
-    "image": null,
-    "totalTimeMinutes": null,
+    "image": "meal-images/roasted-onion-garlic-meatloaves.jpg",
+    "totalTimeMinutes": 35,
     "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "status": "ok",
+    "canonicalName": "Roasted Onion & Garlic Meatloaves with Mashed Potatoes & Roasted Brussels Sprouts",
+    "fetchedAt": "2026-07-25T01:44:42.237Z"
   },
   "ancho-bbq-burgers": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/ancho-bbq-burgers.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "North America"
+    ],
+    "status": "ok",
+    "canonicalName": "Ancho BBQ Burgers with Griddled Onion & Roasted Potato Wedges",
+    "fetchedAt": "2026-07-25T01:44:46.133Z"
   },
   "brown-sugar-bourbon-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
+    "image": "meal-images/brown-sugar-bourbon-chicken.jpg",
+    "totalTimeMinutes": 35,
     "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "status": "ok",
+    "canonicalName": "Brown Sugar Bourbon Chicken with Apple Pan Sauce, Garlic Mashed Potatoes & Zesty Green Beans",
+    "fetchedAt": "2026-07-25T01:44:47.831Z"
   },
   "paprika-chicken-lemony-sauce": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/paprika-chicken-lemony-sauce.jpg",
+    "totalTimeMinutes": 35,
+    "tags": [
+      "Mediterranean"
+    ],
+    "status": "ok",
+    "canonicalName": "Paprika Chicken in a Lemony Sauce with Pistachio Rice & Roasted Carrots",
+    "fetchedAt": "2026-07-25T01:44:49.543Z"
   },
   "chicken-penne-al-limone": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/chicken-penne-al-limone.jpg",
+    "totalTimeMinutes": 20,
+    "tags": [
+      "Italian"
+    ],
+    "status": "ok",
+    "canonicalName": "Chicken Penne al Limone with Zucchini, Toasted Garlic & Fresh Parsley",
+    "fetchedAt": "2026-07-25T01:44:52.853Z"
   },
   "pan-seared-sweet-soy-glazed-chicken": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/pan-seared-sweet-soy-glazed-chicken.jpg",
+    "totalTimeMinutes": 30,
+    "tags": [
+      "Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Pan-Seared Sweet Soy Glazed Chicken with Roasted Carrots & Broccoli",
+    "fetchedAt": "2026-07-25T01:44:56.419Z"
   },
   "meatloaves-sweet-chili-glaze": {
-    "image": null,
-    "totalTimeMinutes": null,
-    "tags": [],
-    "status": "unfetched",
-    "canonicalName": null,
-    "fetchedAt": null
+    "image": "meal-images/meatloaves-sweet-chili-glaze.jpg",
+    "totalTimeMinutes": 40,
+    "tags": [
+      "East Asian"
+    ],
+    "status": "ok",
+    "canonicalName": "Meatloaves with a Sweet Chili Glaze plus Sesame Broccoli & Ginger Rice",
+    "fetchedAt": "2026-07-25T01:45:00.680Z"
   }
 }
